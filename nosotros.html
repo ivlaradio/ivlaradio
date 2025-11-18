@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nosotros - IVLA Radio</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="icon" href="logo-mejorado.png" type="image/png">
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="IVLA Radio" class="logo">
+    <img src="logo-mejorado.png" alt="IVLA Radio" class="logo">
     <h1>IVLA Radio</h1>
     <p>Música Cristiana • En Vivo 24/7</p>
     <button id="theme-toggle" class="theme-btn">🌙</button>
@@ -32,6 +32,17 @@
     <h2>Nosotros</h2>
     <p>Somos IVLA Radio, parte de Iglesia Viña Los Ángeles. Nuestra misión es compartir esperanza y fe a través de la música cristiana.</p>
   </section>
+
+  <!-- 🎧 Botón flotante -->
+  <div id="player-float">🎧</div>
+
+  <!-- 🎧 Reproductor oculto -->
+  <div id="float-player" class="hidden">
+    <span>IVLA Radio - En Vivo</span>
+    <audio controls>
+      <source src="https://stream.zeno.fm/dxrrahmqnpgtv" type="audio/mpeg">
+    </audio>
+  </div>
 
   <script src="script.js"></script>
 </body>
