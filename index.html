@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IVLA Radio - Minimal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #111;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      transition: background 0.5s, color 0.5s;
+    }
+    body.light-mode {
+      background: #f4f4f4;
+      color: #222;
+    }
+    .logo {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      margin: 10px 0;
+    }
+    .player-card {
+      max-width: 350px;
+      background: #181818;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 20px #000;
+      text-align: center;
+      transition: background 0.5s;
+    }
+    body.light-mode .player-card {
+      background: #fff;
+      box-shadow: 0 0 10px #ccc;
+    }
+    audio {
+      width: 100%;
+      margin-top: 15px;
+    }
+    .theme-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #444;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    body.light-mode .theme-btn {
+      background: #ddd;
+      color: #111;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="logo.png" alt="IVLA Radio" class="logo">
+  <h1>IVLA Radio</h1>
+  <p>Música Cristiana • En Vivo 24/7</p>
+
+  <div class="player-card">
+    <h2>Reproductor</h2>
+    <audio controls autoplay>
+      <source src="https://stream.zeno.fm/dxrrahmqnpgtv" type="audio/mpeg">
+      Tu navegador no soporta el audio HTML5.
+    </audio>
+  </div>
+
+  <!-- Botón modo claro/oscuro -->
+  <button id="theme-toggle" class="theme-btn">🌙</button>
+
+  <script>
+    const themeBtn = document.getElementById("theme-toggle");
+    themeBtn.addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
+      themeBtn.textContent = document.body.classList.contains("light-mode") ? "☀️" : "🌙";
+      localStorage.setItem("theme", document.body.classList.contains("light-mode") ? "light" : "dark");
+    });
+    window.addEventListener("load", () => {
+      if (localStorage.getItem("theme") === "light") {
+        document.body.classList.add("light-mode");
+        themeBtn.textContent = "☀️";
+      }
+    });
+  </script>
+
+</body>
+</html>
