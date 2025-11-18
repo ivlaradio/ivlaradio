@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Radio en Vivo - IVLA Radio</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="icon" href="logo-mejorado.png" type="image/png">
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="IVLA Radio" class="logo">
+    <img src="logo-mejorado.png" alt="IVLA Radio" class="logo">
     <h1>IVLA Radio</h1>
     <p>Música Cristiana • En Vivo 24/7</p>
     <button id="theme-toggle" class="theme-btn">🌙</button>
@@ -32,7 +32,7 @@
     <h2>Radio en Vivo</h2>
     <div class="player-card">
       <div class="player-info">
-        <img src="logo.png" class="player-cover" alt="Portada IVLA">
+        <img src="logo-mejorado.png" class="player-cover" alt="Portada IVLA">
         <div>
           <h3>IVLA Radio</h3>
           <p>Música Cristiana 24/7</p>
@@ -40,14 +40,17 @@
       </div>
       <audio controls>
         <source src="https://stream.zeno.fm/dxrrahmqnpgtv" type="audio/mpeg">
-        Tu navegador no soporta el audio HTML5.
       </audio>
     </div>
   </section>
 
-  <div id="fixed-player">
+  <!-- 🎧 Botón flotante -->
+  <div id="player-float">🎧</div>
+
+  <!-- 🎧 Reproductor oculto -->
+  <div id="float-player" class="hidden">
     <span>IVLA Radio - En Vivo</span>
-    <audio id="footerPlayer" controls>
+    <audio controls>
       <source src="https://stream.zeno.fm/dxrrahmqnpgtv" type="audio/mpeg">
     </audio>
   </div>
