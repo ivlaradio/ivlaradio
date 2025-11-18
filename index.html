@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IVLA Radio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="IVLA Radio" class="logo">
+    <h1>IVLA Radio</h1>
+    <p>Música Cristiana • En Vivo 24/7</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#radio">Radio en Vivo</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#programacion">Programación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<section id="inicio" class="section">
+    <h2>Bienvenido a IVLA Radio</h2>
+    <p>Transmitiendo esperanza para Los Ángeles y el mundo.</p>
+</section>
+
+<section id="radio" class="section">
+    <h2>Radio en Vivo</h2>
+
+    <!-- 🎵 REPRODUCTOR TIPO SPOTIFY -->
+    <div class="player-card">
+        <div class="player-info">
+            <img src="logo.png" class="player-cover">
+            <div>
+                <h3>IVLA Radio</h3>
+                <p>Música Cristiana 24/7</p>
+            </div>
+        </div>
+
+        <audio id="mainPlayer" controls>
+            <source src="https://stream.zeno.fm/dxrrahmqnpgtv" type="audio/mpeg">
+        </audio>
+    </div>
+</section>
+
+<section id="nosotros" class="section">
+    <h2>Nosotros</h2>
+    <p>Somos IVLA Radio, parte de Iglesia Viña Los Ángeles.</p>
+</section>
+
+<section id="programacion" class="section">
+    <h2>Programación</h2>
+    <p>Muy pronto…</p>
+</section>
+
+<section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>Correo: contacto@ivlaradio.cl</p>
+</section>
+
+<!-- 🎧 REPRODUCTOR FIJO INFERIOR -->
+<div id="fixed-player">
+    <span>IVLA Radio - En Vivo</span>
+    <audio id="footerPlayer" controls>
+        <source src="https://stream.zeno.fm/dxrrahmqnpgtv" type="audio/mpeg">
+    </audio>
+</div>
+
+</body>
+</html>
